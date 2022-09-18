@@ -1,9 +1,6 @@
 package java_persitence.cadastrocliente.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -11,7 +8,7 @@ import java.util.Objects;
 public class Cliente {
 
   @Id
-   //@Column(name = "cli_id")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private  String nome;
